@@ -27,6 +27,24 @@ jobs:
             .spago
             output
 
+      - name: Set up Node toolchain
+        uses: actions/setup-node@v4
+
+      - name: Cache NPM dependencies
+        uses: actions/cache@v4
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+
+      - name: Install NPM dependencies
+        run: npm install
+
       - name: Build source
         run: spago build --censor-stats --strict --pedantic-packages
 
