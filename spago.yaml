@@ -1,0 +1,29 @@
+package:
+  name: bigints
+  publish:
+    license: MIT
+    version: 7.0.1
+    location:
+      githubOwner: sharkdp
+      githubRepo: purescript-bigints
+  dependencies:
+    - arrays
+    - integers
+    - maybe
+    - partial
+    - prelude
+    - strings
+  test:
+    main: Test.Main
+    dependencies:
+      - assert
+      - console
+      - effect
+      - foldable-traversable
+      - numbers
+      - quickcheck
+      - quickcheck-laws
+workspace:
+  extraPackages: {}
+  packageSet:
+    registry: 60.5.0
