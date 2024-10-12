@@ -9,10 +9,10 @@
     "big-integer": "^1.6.52"
   },
   "devDependencies": {
-    "bower": "^1.8.14",
-    "pulp": "^16.0.2",
-    "purescript-psa": "^0.9.0",
     "rimraf": "^6.0.1"
   },
-  "type": "module"
+  "type": "module",
+  "authors": [
+    "David Peter <mail@david-peter.de>"
+  ]
 }
