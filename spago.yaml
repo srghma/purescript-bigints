@@ -3,7 +3,7 @@ package:
   description: Arbitrary length integers
   publish:
     license: MIT
-    version: 7.0.1
+    version: 8.0.0
     location:
       githubOwner: sharkdp
       githubRepo: purescript-bigints
